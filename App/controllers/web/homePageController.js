@@ -9,7 +9,7 @@ const { testimonialModel } = require("../../models/testimonialModel");
 let getSlider = async (req, res) => {
     let sliderRes = await sliderModel.find();
     let staticPath =
-        process.env.STATICPATH + process.env.PORT + "/uploads/slider/";
+        process.env.STATICPATH  + "/uploads/slider/";
     res.send({
         status: 1,
         staticPath,
