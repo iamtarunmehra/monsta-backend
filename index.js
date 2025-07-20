@@ -10,7 +10,10 @@ const connectDB = require("./App/config/dbconfig");
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: ['https://monsta-oabh.vercel.app'], 
+  credentials: true
+}));// app.use(cors());
 
 // Static folders
 app.use("/uploads/category", express.static("uploads/category"));
