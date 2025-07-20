@@ -22,7 +22,7 @@ let testimonialInsert = async (req, res) => {
 let testimonialView = async (req, res) => {
     let testimonialData = await testimonialModel.find()
     console.log(testimonialData)
-    let staticPath = process.env.STATICPATH + process.env.PORT + '/uploads/testimonial/'
+    let staticPath = process.env.STATICPATH + '/uploads/testimonial/'
     res.send({
         status: 1,
         staticPath,

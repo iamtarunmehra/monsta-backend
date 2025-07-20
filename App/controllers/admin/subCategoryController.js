@@ -47,7 +47,7 @@ let subCategoryInsert = async (req, res) => {
 
 let subCategoryView = async (req, res) => {
 
-    let staticPath = process.env.STATICPATH + process.env.PORT + '/uploads/subCategory/'
+    let staticPath = process.env.STATICPATH + '/uploads/subCategory/'
 
     let subCategoryRes = await subCategoryModel.find().populate('parentCategory');
 

@@ -34,7 +34,7 @@ let subSubCategoryInsert = async (req, res) => {
 }
 
 let subSubCategoryView = async (req, res) => {
-    let staticPath = process.env.STATICPATH + process.env.PORT + '/uploads/subSubCategory/'
+    let staticPath = process.env.STATICPATH + '/uploads/subSubCategory/'
     let subSubCategoryRes = await subSubCategoryModel.find().populate([{ path: 'parentCategory', select: 'categoryName' }, { path: 'subCategory', select: 'subCategoryName' }])
 
     res.send({

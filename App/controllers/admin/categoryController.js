@@ -36,7 +36,7 @@ let categoryInsert = async (req, res) => {
 };
 
 let categoryView = async (req, res) => {
-  let staticPath = process.env.STATICPATH + process.env.PORT + "/uploads/category/";
+  let staticPath = process.env.STATICPATH + "/uploads/category/";
 
   let category = await categoryModel.find();
 
@@ -73,7 +73,7 @@ let categoryChangeStatus = async (req, res) => {
 let editRowData = async (req, res) => {
   let { id } = req.params;
   let staticPath =
-    process.env.STATICPATH + process.env.PORT + "/uploads/category/";
+    process.env.STATICPATH + "/uploads/category/";
   let category = await categoryModel.findOne({ _id: id });
   res.send({
     status: 1,
@@ -85,7 +85,7 @@ let editRowData = async (req, res) => {
 
 let updateRowData = async (req, res) => {
   let { id } = req.params;
-  let staticPath = process.env.STATICPATH + process.env.PORT + "/uploads/category/";
+  let staticPath = process.env.STATICPATH +  "/uploads/category/";
   let { categoryName, categoryOrder } = req.body;
   let obj = {
     categoryName,

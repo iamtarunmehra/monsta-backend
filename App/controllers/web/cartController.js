@@ -41,7 +41,7 @@ let viewCart = async (req, res) => {
         .populate("productColorName", "colorName");
 
     let staticPath =
-        process.env.STATICPATH + process.env.PORT + "/uploads/products/";
+        process.env.STATICPATH + "/uploads/products/";
     res.send({
         status: 1,
         staticPath,

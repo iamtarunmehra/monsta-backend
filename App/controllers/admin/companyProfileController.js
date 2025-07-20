@@ -33,7 +33,7 @@ let companyProfileInsert = async (req, res) => {
 
 let companyProfileView = async (req, res) => {
     let companyDetails = await companyProfileModel.find()
-    let staticPath = process.env.STATICPATH + process.env.PORT + '/uploads/company-profile/'
+    let staticPath = process.env.STATICPATH + '/uploads/company-profile/'
     res.send({
         status: 1,
         staticPath,

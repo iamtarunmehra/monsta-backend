@@ -13,7 +13,7 @@ let orderDetail = async (req, res) => {
     let { id } = req.params;
     let orderRes = await orderModel.findOne({ _id: id })
     let { orderAmount, billingAddress } = orderRes
-    let staticPath = process.env.STATICPATH + process.env.PORT + "/uploads/products/";
+    let staticPath = process.env.STATICPATH  + "/uploads/products/";
     res.send({
         status: 1,
         orderAmount,

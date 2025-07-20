@@ -39,7 +39,7 @@ let sliderInsert = async (req, res) => {
 
 
 let sliderView = async (req, res) => {
-    let staticPath = process.env.STATICPATH + process.env.PORT + '/uploads/slider/'
+    let staticPath = process.env.STATICPATH  + '/uploads/slider/'
     let sliderData = await sliderModel.find()
     res.send({
         status: 1,
@@ -71,7 +71,7 @@ let changeSliderStatus = async (req, res) => {
 }
 
 let sliderEdit = async (req, res) => {
-    let staticPath = process.env.STATICPATH + process.env.PORT + '/uploads/slider/'
+    let staticPath = process.env.STATICPATH + '/uploads/slider/'
     let { id } = req.params
     let sliderRes = await sliderModel.findOne({ _id: id })
     res.send({
@@ -84,7 +84,7 @@ let sliderEdit = async (req, res) => {
 
 let sliderUpdate = async (req, res) => {
     let { id } = req.params
-    let staticPath = process.env.STATICPATH + process.env.PORT + '/uploads/slider/'
+    let staticPath = process.env.STATICPATH  + '/uploads/slider/'
     let { sliderName, sliderOrder } = req.body
     let obj = {
         sliderName,

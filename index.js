@@ -11,7 +11,7 @@ const connectDB = require("./App/config/dbconfig");
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: ['https://monsta-oabh.vercel.app'], 
+  origin: ['https://monsta-oabh.vercel.app'],
   credentials: true
 }));// app.use(cors());
 

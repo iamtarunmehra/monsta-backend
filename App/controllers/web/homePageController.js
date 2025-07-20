@@ -34,7 +34,7 @@ let bestSellingProducts = async (req, res) => {
             "productImage",
         ]);
     let staticPath =
-        process.env.STATICPATH + process.env.PORT + "/uploads/products/";
+        process.env.STATICPATH +  "/uploads/products/";
     res.send({
         status: 1,
         staticPath,
@@ -45,7 +45,7 @@ let bestSellingProducts = async (req, res) => {
 
 let featureItems = async (req, res) => {
     let staticPath =
-        process.env.STATICPATH + process.env.PORT + "/uploads/products/";
+        process.env.STATICPATH +  "/uploads/products/";
     let featureRes = await productModel.find({ productType: 1 })
         .populate({ path: "parentCategory", select: "categoryName" })
         .populate({ path: "productColorName", select: "colorName" })
@@ -69,7 +69,7 @@ let featureItems = async (req, res) => {
 
 let newArrivals = async (req, res) => {
     let staticPath =
-        process.env.STATICPATH + process.env.PORT + "/uploads/products/";
+        process.env.STATICPATH  + "/uploads/products/";
     let newArrivalsRes = await productModel
         .find({ productType: 2 })
         .populate({ path: "parentCategory", select: "categoryName" })
@@ -94,7 +94,7 @@ let newArrivals = async (req, res) => {
 
 let onsale = async (req, res) => {
     let staticPath =
-        process.env.STATICPATH + process.env.PORT + "/uploads/products/";
+        process.env.STATICPATH + "/uploads/products/";
     let onsaleRes = await productModel
         .find({ productType: 3 })
         .populate({ path: "parentCategory", select: "categoryName" })
@@ -119,7 +119,7 @@ let onsale = async (req, res) => {
 
 let topRatedProduct = async (req, res) => {
     let staticPath =
-        process.env.STATICPATH + process.env.PORT + "/uploads/products/";
+        process.env.STATICPATH + "/uploads/products/";
     let topRatedProductRes = await productModel
         .find({ ProductTopRated: true })
         .populate({ path: "parentCategory", select: "categoryName" })
@@ -181,7 +181,7 @@ let megaMenu = async (req, res) => {
 
 let testimonialView = async (req, res) => {
     let testimonialRes = await testimonialModel.find()
-    let staticPath = process.env.STATICPATH + process.env.PORT + '/uploads/testimonial/'
+    let staticPath = process.env.STATICPATH + '/uploads/testimonial/'
     res.send({
         status: 1,
         staticPath,
@@ -203,7 +203,7 @@ let showProduct = async (req, res) => {
 
 let showCompanyProfile = async (req, res) => {
     let companyDetails = await companyProfileModel.find()
-    let staticPath = process.env.STATICPATH + process.env.PORT + '/uploads/company-profile/'
+    let staticPath = process.env.STATICPATH + '/uploads/company-profile/'
     res.send({
         status: 1,
         staticPath,
